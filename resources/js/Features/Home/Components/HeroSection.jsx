@@ -30,14 +30,30 @@ export default function HeroSection({ featuredNews, heroNews, standings, fallbac
             <section className="kbc-table-card">
                 <div className="kbc-table-head">
                     <h2>Table</h2>
-                    <button type="button">View full table</button>
+                    <a href="/table" className="kbc-table-link">
+                        View full table
+                    </a>
                 </div>
 
-                <div className="kbc-table-list">
+                <div className="kbc-home-table-headrow">
+                    <p>Pos</p>
+                    <p className="kbc-home-team-head">Team</p>
+                    <p>Pl</p>
+                    <p>GD</p>
+                    <p>Pts</p>
+                </div>
+
+                <div className="kbc-home-table-list">
                     {standings.map((standing) => (
-                        <div key={standing.id} className="kbc-table-row">
-                            <p>{standing.position}</p>
-                            <div>
+                        <div key={standing.id} className="kbc-home-table-row">
+                            <p className="kbc-home-table-pos">{standing.position}</p>
+                            <div className="kbc-home-table-team">
+                                {standing.team.logo_url && (
+                                    <img
+                                        src={standing.team.logo_url}
+                                        alt={standing.team.short_name ?? standing.team.name}
+                                    />
+                                )}
                                 <strong>{standing.team.short_name ?? standing.team.name}</strong>
                             </div>
                             <p>{standing.played}</p>

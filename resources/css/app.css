@@ -323,14 +323,20 @@ body {
     font-size: 19px;
 }
 
+.kbc-table-link,
 .kbc-table-head button {
-    border: 1px solid rgba(95, 228, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
-    background: rgba(95, 228, 255, 0.1);
-    color: var(--cyan);
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
     font-weight: 700;
     font-size: 11px;
     padding: 6px 10px;
+    text-decoration: none;
+}
+
+.kbc-table-link:hover {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .kbc-table-list {
@@ -352,6 +358,76 @@ body {
 .kbc-table-row strong {
     margin: 0;
     font-size: 12px;
+}
+
+.kbc-home-table-headrow,
+.kbc-home-table-row {
+    display: grid;
+    grid-template-columns: 34px 1fr 30px 44px 32px;
+    align-items: center;
+    gap: 6px;
+}
+
+.kbc-home-table-headrow {
+    color: var(--text-soft);
+    font-size: 11px;
+    padding: 0 8px 6px;
+}
+
+.kbc-home-table-headrow p {
+    margin: 0;
+    text-align: center;
+}
+
+.kbc-home-team-head {
+    text-align: left !important;
+}
+
+.kbc-home-table-list {
+    display: grid;
+    gap: 5px;
+    max-height: 392px;
+    overflow-y: auto;
+    padding-right: 2px;
+}
+
+.kbc-home-table-row {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 7px 8px;
+}
+
+.kbc-home-table-row p,
+.kbc-home-table-row strong {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.kbc-home-table-pos {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+}
+
+.kbc-home-table-team strong {
+    text-align: left;
+    display: block;
+    font-family: 'Sora', sans-serif;
+}
+
+.kbc-home-table-team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.kbc-home-table-team img {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .kbc-standings-table {
@@ -383,6 +459,11 @@ body {
 
 .kbc-standings-head p {
     margin: 0;
+    text-align: center;
+}
+
+.kbc-standings-head p:nth-child(2) {
+    text-align: left;
 }
 
 .kbc-standings-body {
