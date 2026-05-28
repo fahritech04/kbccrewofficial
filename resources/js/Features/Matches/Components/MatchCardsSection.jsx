@@ -2,11 +2,12 @@ import {
     formatMatchDate,
     formatMatchDayLabel,
     formatMatchTime,
+    toLocalDateKey,
 } from '../../Site/utils/date';
 
 export default function MatchCardsSection({ title, matches, emptyMessage }) {
     const groupedMatches = matches.reduce((acc, match) => {
-        const dayKey = match.match_date?.split('T')?.[0] ?? String(match.id);
+        const dayKey = toLocalDateKey(match.match_date) ?? String(match.id);
 
         if (!acc[dayKey]) {
             acc[dayKey] = [];
@@ -75,7 +76,7 @@ export default function MatchCardsSection({ title, matches, emptyMessage }) {
                                         <p className="kbc-match-row-meta">
                                             {formatMatchDate(match.match_date)} |{' '}
                                             {formatMatchTime(match.match_date)}
-                                            <span>•</span>
+                                            <span>&bull;</span>
                                             {match.venue}
                                         </p>
                                     </div>
@@ -88,3 +89,4 @@ export default function MatchCardsSection({ title, matches, emptyMessage }) {
         </section>
     );
 }
+
