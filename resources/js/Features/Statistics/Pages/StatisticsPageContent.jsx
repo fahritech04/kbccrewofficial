@@ -1,3 +1,5 @@
+import StandingsCompactRows from '../../Site/Components/StandingsCompactRows';
+
 function StatCard({ label, value }) {
     return (
         <article className="kbc-match-card">
@@ -61,23 +63,10 @@ export default function StatisticsPageContent({ summary, topOffense, topDefense,
                         <h2>Top Point Differential</h2>
                     </div>
 
-                    <div className="kbc-table-list">
-                        {topPointDiff.map((standing) => (
-                            <div key={standing.id} className="kbc-table-row">
-                                <p>{standing.position}</p>
-                                <div>
-                                    <strong>{standing.team.short_name}</strong>
-                                </div>
-                                <p>{standing.played}</p>
-                                <p>
-                                    {standing.point_diff > 0
-                                        ? `+${standing.point_diff}`
-                                        : standing.point_diff}
-                                </p>
-                                <p>{standing.points}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <StandingsCompactRows
+                        standings={topPointDiff}
+                        thirdColumnValue={(standing) => standing.played}
+                    />
                 </section>
             )}
         </section>

@@ -14,8 +14,12 @@
     --line: rgba(255, 255, 255, 0.1);
     --text: #fff7ff;
     --text-soft: #ceb5de;
+    --active-text: #ffffff;
+    --active-bg: rgba(255, 255, 255, 0.12);
+    --active-bg-hover: rgba(255, 255, 255, 0.16);
+    --active-border: rgba(255, 255, 255, 0.22);
     --pink: #ff5ab2;
-    --cyan: #5fe4ff;
+    --cyan: var(--active-text);
 }
 
 * {
@@ -163,9 +167,9 @@ body {
 }
 
 .kbc-nav a.is-active {
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: var(--active-bg);
+    color: var(--active-text);
+    border: 1px solid var(--active-border);
 }
 
 .kbc-topbar-right {
@@ -192,7 +196,7 @@ body {
     border-radius: 999px;
     background:
         linear-gradient(#2a003d, #2a003d) padding-box,
-        linear-gradient(90deg, #00f5ff, #c7ff4d, #ff66b8) border-box;
+        linear-gradient(90deg, #ffffff, #c7ff4d, #ff66b8) border-box;
     color: #fff;
     padding: 10px 18px;
     font-size: 14px;
@@ -325,10 +329,10 @@ body {
 
 .kbc-table-link,
 .kbc-table-head button {
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border: 1px solid var(--active-border);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.12);
-    color: #fff;
+    background: var(--active-bg);
+    color: var(--active-text);
     font-weight: 700;
     font-size: 11px;
     padding: 6px 10px;
@@ -336,7 +340,7 @@ body {
 }
 
 .kbc-table-link:hover {
-    background: rgba(255, 255, 255, 0.16);
+    background: var(--active-bg-hover);
 }
 
 .kbc-table-list {
@@ -1113,9 +1117,9 @@ body {
 
 .kbc-ig-visit {
     text-decoration: none;
-    color: #fff;
-    border: 1px solid rgba(95, 228, 255, 0.5);
-    background: rgba(95, 228, 255, 0.14);
+    color: var(--active-text);
+    border: 1px solid var(--active-border);
+    background: var(--active-bg);
     border-radius: 999px;
     padding: 8px 14px;
     font-size: 12px;
@@ -1134,9 +1138,9 @@ body {
 }
 
 .kbc-ig-status.is-info {
-    border-color: rgba(95, 228, 255, 0.45);
-    background: rgba(95, 228, 255, 0.12);
-    color: #dbf7ff;
+    border-color: var(--active-border);
+    background: var(--active-bg);
+    color: var(--active-text);
 }
 
 .kbc-ig-profile {

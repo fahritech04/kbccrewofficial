@@ -1,3 +1,5 @@
+import { formatPointDiff } from '../../Site/utils/standings';
+
 export default function HeroSection({ featuredNews, heroNews, standings, fallbackImage }) {
     return (
         <main className="kbc-hero-grid">
@@ -57,11 +59,7 @@ export default function HeroSection({ featuredNews, heroNews, standings, fallbac
                                 <strong>{standing.team.short_name ?? standing.team.name}</strong>
                             </div>
                             <p>{standing.played}</p>
-                            <p>
-                                {standing.point_diff > 0
-                                    ? `+${standing.point_diff}`
-                                    : standing.point_diff}
-                            </p>
+                            <p>{formatPointDiff(standing.point_diff)}</p>
                             <p>{standing.points}</p>
                         </div>
                     ))}

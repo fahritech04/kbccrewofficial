@@ -26,8 +26,11 @@ export default function AppHeader({
             <header className="kbc-microbar">
                 <div className="kbc-micro-links">
                     {microLinks.map((item) => (
-                        <a key={item} href="#">
-                            {item}
+                        <a
+                            key={typeof item === 'string' ? item : item.label}
+                            href={typeof item === 'string' ? '#' : item.href}
+                        >
+                            {typeof item === 'string' ? item : item.label}
                         </a>
                     ))}
                 </div>

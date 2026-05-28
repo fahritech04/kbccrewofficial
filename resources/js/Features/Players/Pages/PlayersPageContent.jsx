@@ -1,4 +1,5 @@
 import { SITE_FALLBACK_IMAGE } from '../../Site/constants';
+import StandingsCompactRows from '../../Site/Components/StandingsCompactRows';
 
 export default function PlayersPageContent({ spotlightTeams, stories }) {
     return (
@@ -16,23 +17,10 @@ export default function PlayersPageContent({ spotlightTeams, stories }) {
                         <h2>Spotlight Teams</h2>
                     </div>
 
-                    <div className="kbc-table-list">
-                        {spotlightTeams.map((standing) => (
-                            <div key={standing.id} className="kbc-table-row">
-                                <p>{standing.position}</p>
-                                <div>
-                                    <strong>{standing.team.short_name}</strong>
-                                </div>
-                                <p>{standing.won}-{standing.lost}</p>
-                                <p>
-                                    {standing.point_diff > 0
-                                        ? `+${standing.point_diff}`
-                                        : standing.point_diff}
-                                </p>
-                                <p>{standing.points}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <StandingsCompactRows
+                        standings={spotlightTeams}
+                        thirdColumnValue={(standing) => `${standing.won}-${standing.lost}`}
+                    />
                 </section>
             )}
 
