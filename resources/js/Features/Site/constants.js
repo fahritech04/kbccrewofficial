@@ -14,7 +14,6 @@ export const SITE_MICRO_LINKS = [
 export const SITE_NAV_LINKS = [
     { label: 'Matches', href: '/matches' },
     { label: 'Table', href: '/table' },
-    { label: 'Statistics', href: '/statistics' },
     { label: 'Players', href: '/players' },
     { label: 'Clubs', href: '/clubs' },
     { label: 'Instagram', href: '/instagram' },

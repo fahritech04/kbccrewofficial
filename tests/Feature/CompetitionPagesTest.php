@@ -76,29 +76,6 @@ class CompetitionPagesTest extends TestCase
                 ->etc());
     }
 
-    public function test_statistics_page_returns_200_and_expected_props_structure(): void
-    {
-        $this->get(route('statistics.index'))
-            ->assertOk()
-            ->assertInertia(fn (Assert $page) => $page
-                ->component('Statistics')
-                ->whereType('summary', 'array')
-                ->whereType('topOffense', 'array')
-                ->whereType('topDefense', 'array')
-                ->whereType('topPointDiff', 'array')
-                ->has('summary', fn (Assert $summary) => $summary
-                    ->hasAll([
-                        'total_matches',
-                        'scheduled_matches',
-                        'live_matches',
-                        'finished_matches',
-                        'average_total_points',
-                    ])
-                    ->etc())
-                ->has('topPointDiff.0')
-                ->etc());
-    }
-
     public function test_players_page_returns_200_and_expected_props_structure(): void
     {
         $this->get(route('players.index'))

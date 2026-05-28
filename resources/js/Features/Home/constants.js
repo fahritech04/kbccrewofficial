@@ -29,8 +29,8 @@ export const PARTNERS = [
 
 export const FOOTER_LINK_COLUMNS = [
     ['Kotabaru Basketball Competition', 'Fantasy', 'Matches'],
-    ['Table', 'Statistics', 'Latest News'],
-    ['Latest Video', 'Clubs', 'Players'],
+    ['Table', 'Latest News', 'Players'],
+    ['Latest Video', 'Clubs', 'Instagram'],
 ];
 
 export const FOOTER_BOTTOM_LINKS = [
