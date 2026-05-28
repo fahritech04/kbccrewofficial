@@ -354,6 +354,125 @@ body {
     font-size: 12px;
 }
 
+.kbc-standings-table {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #320047 0%, #2a003d 100%);
+    overflow: hidden;
+}
+
+.kbc-standings-scroll {
+    overflow-x: auto;
+}
+
+.kbc-standings-head,
+.kbc-standings-row {
+    min-width: 980px;
+    display: grid;
+    grid-template-columns: 60px minmax(250px, 1.8fr) repeat(8, minmax(42px, 0.32fr)) 1fr;
+    align-items: center;
+    column-gap: 8px;
+    padding: 10px 14px;
+}
+
+.kbc-standings-head {
+    color: var(--text-soft);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 12px;
+}
+
+.kbc-standings-head p {
+    margin: 0;
+}
+
+.kbc-standings-body {
+    display: grid;
+}
+
+.kbc-standings-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kbc-standings-row:last-child {
+    border-bottom: 0;
+}
+
+.kbc-standings-row p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.kbc-standings-pos {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+}
+
+.kbc-standings-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.kbc-standings-team img {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kbc-standings-team strong {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kbc-standings-points {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+}
+
+.kbc-standings-form {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.kbc-form-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.kbc-form-badge.is-w {
+    background: #21a453;
+}
+
+.kbc-form-badge.is-d {
+    background: #7d688c;
+}
+
+.kbc-form-badge.is-l {
+    background: #d3225d;
+}
+
+.kbc-standings-note {
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text-soft);
+}
+
 .kbc-sponsor-strip {
     margin-top: 10px;
     padding: 10px 12px;
@@ -488,6 +607,108 @@ body {
     margin: 0;
     color: var(--text-soft);
     font-size: 10px;
+}
+
+.kbc-matchday-list {
+    display: grid;
+    gap: 14px;
+}
+
+.kbc-matchday-block {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(28, 0, 40, 0.35);
+    overflow: hidden;
+}
+
+.kbc-matchday-date {
+    margin: 0;
+    padding: 12px 14px;
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kbc-match-row {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+    padding: 12px 14px;
+    align-items: center;
+}
+
+.kbc-match-row + .kbc-match-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kbc-match-row-status {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-soft);
+    align-self: center;
+}
+
+.kbc-match-row-main {
+    display: grid;
+    gap: 2px;
+}
+
+.kbc-match-row-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.kbc-match-row-team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.kbc-match-row-team img {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kbc-match-row-team span {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kbc-match-row-team-left {
+    justify-content: flex-end;
+}
+
+.kbc-match-row-team-right {
+    justify-content: flex-start;
+}
+
+.kbc-match-row-score {
+    font-family: 'Sora', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+}
+
+.kbc-match-row-meta {
+    margin: 7px 0 0;
+    color: var(--text-soft);
+    font-size: 12px;
+    text-align: center;
+}
+
+.kbc-match-row-meta span {
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .kbc-footer {
@@ -701,6 +922,46 @@ body {
     .kbc-main-content h1 {
         font-size: 24px;
     }
+
+    .kbc-standings-head,
+    .kbc-standings-row {
+        padding-inline: 10px;
+    }
+
+    .kbc-standings-team strong {
+        font-size: 14px;
+    }
+
+    .kbc-matchday-date {
+        font-size: 16px;
+    }
+
+    .kbc-match-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .kbc-match-row-status {
+        margin-top: 0;
+    }
+
+    .kbc-match-row-teams {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .kbc-match-row-team-left,
+    .kbc-match-row-team-right {
+        justify-content: flex-start;
+    }
+
+    .kbc-match-row-score {
+        font-size: 20px;
+    }
+
+    .kbc-match-row-team span {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -733,6 +994,38 @@ body {
 
 .kbc-ig-head p {
     margin: 4px 0 0;
+    color: var(--text-soft);
+    font-size: 13px;
+}
+
+.kbc-matches-headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kbc-matches-headline button {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 16px;
+}
+
+.kbc-matches-headline h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+}
+
+.kbc-matches-headline p {
+    margin: 2px 0 0;
+    text-align: center;
     color: var(--text-soft);
     font-size: 13px;
 }
@@ -871,6 +1164,15 @@ body {
     .kbc-ig-head {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .kbc-matches-headline {
+        justify-content: space-between;
+    }
+
+    .kbc-matches-headline h1,
+    .kbc-matches-headline p {
+        text-align: left;
     }
 
     .kbc-ig-grid {

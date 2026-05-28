@@ -1,13 +1,25 @@
 import MatchCardsSection from '../Components/MatchCardsSection';
+import { formatMatchDayLabel } from '../../Site/utils/date';
 
 export default function MatchesPageContent({ upcomingMatches, recentMatches }) {
+    const featuredMatchDate =
+        upcomingMatches[0]?.match_date ??
+        recentMatches[0]?.match_date ??
+        new Date().toISOString();
+
     return (
         <section className="kbc-ig-panel">
-            <header className="kbc-ig-head">
+            <header className="kbc-matches-headline">
+                <button type="button" aria-label="Previous matchday">
+                    &#10094;
+                </button>
                 <div>
                     <h1>Matches</h1>
-                    <p>Jadwal pertandingan berikutnya dan hasil terbaru kompetisi.</p>
+                    <p>{formatMatchDayLabel(featuredMatchDate)}</p>
                 </div>
+                <button type="button" aria-label="Next matchday">
+                    &#10095;
+                </button>
             </header>
 
             <MatchCardsSection

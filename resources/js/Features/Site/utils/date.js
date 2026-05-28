@@ -9,3 +9,10 @@ export const formatMatchTime = (date) =>
         hour: '2-digit',
         minute: '2-digit',
     });
+
+export const formatMatchDayLabel = (date) =>
+    new Date(date).toLocaleDateString('id-ID', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+    });
