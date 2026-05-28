@@ -27,12 +27,6 @@ export const PARTNERS = [
     ['Topps', 'Official Licensee'],
 ];
 
-export const FOOTER_LINK_COLUMNS = [
-    ['Kotabaru Basketball Competition', 'Fantasy', 'Matches'],
-    ['Table', 'Latest News', 'Players'],
-    ['Latest Video', 'Clubs', 'Instagram'],
-];
-
 export const FOOTER_BOTTOM_LINKS = [
     'Terms of Use',
     'Policies',

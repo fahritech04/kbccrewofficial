@@ -1,4 +1,4 @@
-export default function FooterSection({ partners, footerLinkColumns, footerBottomLinks }) {
+export default function FooterSection({ partners, footerBottomLinks }) {
     return (
         <footer className="kbc-footer">
             <section className="kbc-footer-partners">
@@ -12,20 +12,8 @@ export default function FooterSection({ partners, footerLinkColumns, footerBotto
                 </div>
             </section>
 
-            <section className="kbc-footer-links">
-                {footerLinkColumns.map((column, columnIndex) => (
-                    <div key={columnIndex} className="kbc-footer-link-col">
-                        {column.map((item) => (
-                            <a key={item} href="#">
-                                {item}
-                            </a>
-                        ))}
-                    </div>
-                ))}
-            </section>
-
             <section className="kbc-footer-bottom">
-                <p>© Kotabaru Basketball Competition 2026</p>
+                <p>&copy; Kotabaru Basketball Competition 2026</p>
                 <div className="kbc-footer-bottom-links">
                     {footerBottomLinks.map((item) => (
                         <a key={item} href="#">
@@ -38,4 +26,3 @@ export default function FooterSection({ partners, footerLinkColumns, footerBotto
         </footer>
     );
 }
-

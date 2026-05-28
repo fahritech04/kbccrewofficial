@@ -6,7 +6,6 @@ import SponsorStrip from '../Components/SponsorStrip';
 import {
     ALERT_TEXT,
     FOOTER_BOTTOM_LINKS,
-    FOOTER_LINK_COLUMNS,
     HERO_NEWS_LIMIT,
     MEDIA_SECTIONS,
     PARTNERS,
@@ -51,7 +50,6 @@ export default function HomePageContent({ featuredNews, news, standings, matches
 
             <FooterSection
                 partners={PARTNERS}
-                footerLinkColumns={FOOTER_LINK_COLUMNS}
                 footerBottomLinks={FOOTER_BOTTOM_LINKS}
             />
         </>
