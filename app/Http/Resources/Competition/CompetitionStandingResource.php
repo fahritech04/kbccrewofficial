@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Home;
+namespace App\Http\Resources\Competition;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class HomeStandingResource extends JsonResource
+class CompetitionStandingResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -29,6 +29,8 @@ class HomeStandingResource extends JsonResource
                 'name' => $this->team?->name,
                 'short_name' => $this->team?->short_name,
                 'logo_url' => $this->team?->logo_url,
+                'city' => $this->team?->city,
+                'home_color' => $this->team?->home_color,
             ],
         ];
     }

@@ -22,6 +22,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     margin: 0;
     font-family: 'Barlow', sans-serif;
@@ -573,7 +577,7 @@ body {
 }
 
 .kbc-footer-bottom-links a::after {
-    content: 'â€¢';
+    content: 'Ã¢â‚¬Â¢';
     margin-left: 7px;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -696,5 +700,174 @@ body {
 @media (max-width: 520px) {
     .kbc-content-wrap {
         padding-inline: 10px;
+    }
+}
+
+.kbc-ig-panel {
+    margin-top: 10px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #390051 0%, #2f0044 100%);
+    padding: 14px;
+}
+
+.kbc-ig-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.kbc-ig-head h1 {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+}
+
+.kbc-ig-head p {
+    margin: 4px 0 0;
+    color: var(--text-soft);
+    font-size: 13px;
+}
+
+.kbc-ig-visit {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(95, 228, 255, 0.5);
+    background: rgba(95, 228, 255, 0.14);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.kbc-ig-status {
+    margin: 0 0 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 170, 63, 0.45);
+    background: rgba(255, 170, 63, 0.12);
+    color: #ffe3b8;
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+.kbc-ig-status.is-info {
+    border-color: rgba(95, 228, 255, 0.45);
+    background: rgba(95, 228, 255, 0.12);
+    color: #dbf7ff;
+}
+
+.kbc-ig-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kbc-ig-profile img,
+.kbc-ig-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.kbc-ig-avatar {
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.kbc-ig-profile h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.kbc-ig-profile p {
+    margin: 4px 0 0;
+    color: var(--text-soft);
+    font-size: 12px;
+}
+
+.kbc-ig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.kbc-ig-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.kbc-ig-card a {
+    display: block;
+}
+
+.kbc-ig-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.kbc-ig-card-body {
+    padding: 9px;
+}
+
+.kbc-ig-caption {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+    min-height: 32px;
+}
+
+.kbc-ig-metrics {
+    margin: 6px 0 0;
+    color: #e7d7f8;
+    font-size: 11px;
+}
+
+.kbc-ig-comments {
+    margin-top: 7px;
+    display: grid;
+    gap: 5px;
+}
+
+.kbc-ig-comments p {
+    margin: 0;
+    font-size: 11px;
+    color: #f4e9ff;
+}
+
+.kbc-ig-comments strong {
+    color: var(--cyan);
+}
+
+.kbc-ig-no-comments {
+    margin: 7px 0 0;
+    color: var(--text-soft);
+    font-size: 11px;
+}
+
+@media (max-width: 980px) {
+    .kbc-ig-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .kbc-ig-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .kbc-ig-grid {
+        grid-template-columns: 1fr;
     }
 }

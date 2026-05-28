@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\Home\HomeMatchResource;
-use App\Http\Resources\Home\HomeNewsResource;
-use App\Http\Resources\Home\HomeStandingResource;
+use App\Http\Resources\Competition\CompetitionMatchResource;
+use App\Http\Resources\Competition\CompetitionNewsResource;
+use App\Http\Resources\Competition\CompetitionStandingResource;
 use App\Services\Home\HomePageContentService;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -17,11 +17,11 @@ class HomeController extends Controller
 
         return Inertia::render('Home', [
             'featuredNews' => $homePageContent['featured_news']
-                ? HomeNewsResource::make($homePageContent['featured_news'])->resolve()
+                ? CompetitionNewsResource::make($homePageContent['featured_news'])->resolve()
                 : null,
-            'news' => HomeNewsResource::collection($homePageContent['news'])->resolve(),
-            'standings' => HomeStandingResource::collection($homePageContent['standings'])->resolve(),
-            'matches' => HomeMatchResource::collection($homePageContent['matches'])->resolve(),
+            'news' => CompetitionNewsResource::collection($homePageContent['news'])->resolve(),
+            'standings' => CompetitionStandingResource::collection($homePageContent['standings'])->resolve(),
+            'matches' => CompetitionMatchResource::collection($homePageContent['matches'])->resolve(),
         ]);
     }
 }

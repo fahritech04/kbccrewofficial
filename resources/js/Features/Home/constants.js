@@ -1,29 +1,7 @@
-export const FALLBACK_IMAGE =
-    'https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1200&q=80';
-
 export const HERO_NEWS_LIMIT = 4;
 
 export const ALERT_TEXT =
     'Kotabaru Hawks pastikan tiket playoff usai kemenangan dramatis pekan ini.';
-
-export const MICRO_LINKS = [
-    'Kotabaru Basketball Competition',
-    'Shop',
-    'About Us',
-    'Football & Community',
-    'Events',
-    'Media',
-    'The Archive',
-];
-
-export const NAV_LINKS = [
-    'Matches',
-    'Table',
-    'Statistics',
-    'Players',
-    'Clubs',
-    'Instagram',
-];
 
 export const SPONSORS = [
     'Adidas',
@@ -71,4 +49,3 @@ export const MEDIA_SECTIONS = [
     { key: 'clubs', title: 'From The Clubs', count: 6 },
     { key: 'quizzes', title: 'Games, Quizzes & Polls', count: 5 },
 ];
-

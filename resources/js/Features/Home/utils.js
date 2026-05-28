@@ -1,16 +1,4 @@
-import { FALLBACK_IMAGE } from './constants';
-
-export const formatDate = (date) =>
-    new Date(date).toLocaleDateString('id-ID', {
-        day: '2-digit',
-        month: 'short',
-    });
-
-export const formatTime = (date) =>
-    new Date(date).toLocaleTimeString('id-ID', {
-        hour: '2-digit',
-        minute: '2-digit',
-    });
+import { SITE_FALLBACK_IMAGE } from '../Site/constants';
 
 export function buildCardsFromNews(news, count, sectionKey) {
     if (!news?.length) {
@@ -24,7 +12,7 @@ export function buildCardsFromNews(news, count, sectionKey) {
             id: `${sectionKey}-${item.id}-${index}`,
             title: item.title,
             category: item.category,
-            image: item.image_url ?? FALLBACK_IMAGE,
+            image: item.image_url ?? SITE_FALLBACK_IMAGE,
         };
     });
 }

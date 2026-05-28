@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'instagram' => [
+        'username' => env('INSTAGRAM_USERNAME', 'kbccrewofficial'),
+        'user_id' => env('INSTAGRAM_USER_ID'),
+        'access_token' => env('INSTAGRAM_ACCESS_TOKEN'),
+        'graph_version' => env('INSTAGRAM_GRAPH_VERSION', 'v23.0'),
+        'cache_minutes' => env('INSTAGRAM_CACHE_MINUTES', 5),
+        'comments_limit' => env('INSTAGRAM_COMMENTS_LIMIT', 3),
+    ],
+
 ];

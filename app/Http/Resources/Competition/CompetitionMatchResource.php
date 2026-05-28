@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Home;
+namespace App\Http\Resources\Competition;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class HomeMatchResource extends JsonResource
+class CompetitionMatchResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

@@ -39,11 +39,16 @@ export default function Header({
                 </div>
 
                 <nav className={`kbc-nav ${isMobileMenuOpen ? 'is-open' : ''}`}>
-                    {navLinks.map((item) => (
-                        <a key={item} href="#" onClick={onCloseMobileMenu}>
-                            {item}
-                        </a>
-                    ))}
+                    {navLinks.map((item) => {
+                        const label = typeof item === 'string' ? item : item.label;
+                        const href = typeof item === 'string' ? '#' : item.href;
+
+                        return (
+                            <a key={label} href={href} onClick={onCloseMobileMenu}>
+                                {label}
+                            </a>
+                        );
+                    })}
                 </nav>
 
                 <div className="kbc-topbar-right">
