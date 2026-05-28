@@ -38,8 +38,4 @@ export const FOOTER_BOTTOM_LINKS = [
 export const MEDIA_SECTIONS = [
     { key: 'moments', title: 'Unmissable Moments', count: 6 },
     { key: 'features', title: 'News & Features', count: 8 },
-    { key: 'awards', title: 'Awards', count: 6 },
-    { key: 'champions', title: 'Champions Feed', count: 8 },
-    { key: 'clubs', title: 'From The Clubs', count: 6 },
-    { key: 'quizzes', title: 'Games, Quizzes & Polls', count: 5 },
 ];
