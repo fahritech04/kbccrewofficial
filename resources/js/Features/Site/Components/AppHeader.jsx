@@ -1,10 +1,26 @@
-export default function Header({
+import { Link, usePage } from '@inertiajs/react';
+
+export default function AppHeader({
     isMobileMenuOpen,
     onToggleMobileMenu,
     onCloseMobileMenu,
     microLinks,
     navLinks,
 }) {
+    const currentUrl = usePage().url ?? '';
+
+    const isNavItemActive = (href) => {
+        if (!href || href === '#') {
+            return false;
+        }
+
+        if (href === '/') {
+            return currentUrl === '/';
+        }
+
+        return currentUrl === href || currentUrl.startsWith(`${href}/`);
+    };
+
     return (
         <>
             <header className="kbc-microbar">
@@ -42,11 +58,18 @@ export default function Header({
                     {navLinks.map((item) => {
                         const label = typeof item === 'string' ? item : item.label;
                         const href = typeof item === 'string' ? '#' : item.href;
+                        const isActive = isNavItemActive(href);
 
                         return (
-                            <a key={label} href={href} onClick={onCloseMobileMenu}>
+                            <Link
+                                key={label}
+                                href={href}
+                                className={isActive ? 'is-active' : ''}
+                                aria-current={isActive ? 'page' : undefined}
+                                onClick={onCloseMobileMenu}
+                            >
                                 {label}
-                            </a>
+                            </Link>
                         );
                     })}
                 </nav>
