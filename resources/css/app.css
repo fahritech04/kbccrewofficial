@@ -33,17 +33,17 @@ body {
     overflow-x: clip;
 }
 
-.pl-shell {
+.kbc-shell {
     width: min(1360px, 100%);
     margin: 0 auto;
     padding: 0 0 14px;
 }
 
-.pl-content-wrap {
+.kbc-content-wrap {
     padding-inline: 14px;
 }
 
-.pl-microbar {
+.kbc-microbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,24 +53,24 @@ body {
     font-size: 12px;
 }
 
-.pl-micro-links {
+.kbc-micro-links {
     display: flex;
     gap: 26px;
     overflow-x: auto;
     white-space: nowrap;
 }
 
-.pl-microbar a {
+.kbc-microbar a {
     color: #fff;
     text-decoration: none;
     opacity: 0.9;
 }
 
-.pl-microbar a:hover {
+.kbc-microbar a:hover {
     opacity: 1;
 }
 
-.pl-topbar {
+.kbc-topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,14 +81,14 @@ body {
     position: relative;
 }
 
-.pl-topbar-left {
+.kbc-topbar-left {
     display: flex;
     align-items: center;
     gap: 14px;
     flex: 0 0 auto;
 }
 
-.pl-menu-btn {
+.kbc-menu-btn {
     width: 42px;
     height: 42px;
     border: 1px solid rgba(255, 255, 255, 0.16);
@@ -100,13 +100,13 @@ body {
     place-items: center;
 }
 
-.pl-brand {
+.kbc-brand {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.pl-brand-mark {
+.kbc-brand-mark {
     width: 40px;
     height: 40px;
     border-radius: 999px;
@@ -118,14 +118,14 @@ body {
     background: linear-gradient(140deg, #ff3f9a, #7e3cff);
 }
 
-.pl-brand-name {
+.kbc-brand-name {
     margin: 0;
     font-family: 'Sora', sans-serif;
     font-size: 18px;
     line-height: 1;
 }
 
-.pl-brand-tag {
+.kbc-brand-tag {
     margin: 0;
     color: #fff;
     font-family: 'Sora', sans-serif;
@@ -134,7 +134,7 @@ body {
     line-height: 1;
 }
 
-.pl-nav {
+.kbc-nav {
     display: flex;
     gap: 3px;
     flex-wrap: nowrap;
@@ -145,7 +145,7 @@ body {
     justify-content: center;
 }
 
-.pl-nav a {
+.kbc-nav a {
     color: var(--text);
     text-decoration: none;
     font-weight: 700;
@@ -154,18 +154,18 @@ body {
     border-radius: 999px;
 }
 
-.pl-nav a:hover {
+.kbc-nav a:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.pl-topbar-right {
+.kbc-topbar-right {
     display: flex;
     align-items: center;
     gap: 8px;
     flex: 0 0 auto;
 }
 
-.pl-icon-btn {
+.kbc-icon-btn {
     width: 38px;
     height: 38px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -177,7 +177,7 @@ body {
     place-items: center;
 }
 
-.pl-signin-btn {
+.kbc-signin-btn {
     border: 1.6px solid transparent;
     border-radius: 999px;
     background:
@@ -189,7 +189,7 @@ body {
     font-weight: 700;
 }
 
-.pl-alert {
+.kbc-alert {
     border: 1px solid var(--line);
     border-radius: 10px;
     background: rgba(71, 3, 102, 0.8);
@@ -199,43 +199,43 @@ body {
     margin-bottom: 10px;
 }
 
-.pl-alert span {
+.kbc-alert span {
     color: var(--pink);
     font-weight: 700;
     margin-right: 6px;
 }
 
-.pl-hero-grid {
+.kbc-hero-grid {
     display: grid;
     grid-template-columns: 2.15fr 1fr 1fr;
     gap: 10px;
 }
 
-.pl-main-card,
-.pl-news-rail,
-.pl-table-card,
-.pl-sponsor-strip,
-.pl-section {
+.kbc-main-card,
+.kbc-news-rail,
+.kbc-table-card,
+.kbc-sponsor-strip,
+.kbc-section {
     border: 1px solid var(--line);
     border-radius: 14px;
     background: linear-gradient(180deg, var(--panel-soft) 0%, var(--panel) 100%);
 }
 
-.pl-main-card {
+.kbc-main-card {
     overflow: hidden;
 }
 
-.pl-main-image {
+.kbc-main-image {
     width: 100%;
     height: 335px;
     object-fit: cover;
 }
 
-.pl-main-content {
+.kbc-main-content {
     padding: 14px;
 }
 
-.pl-kicker {
+.kbc-kicker {
     margin: 0;
     font-size: 11px;
     letter-spacing: 0.08em;
@@ -244,27 +244,27 @@ body {
     font-weight: 800;
 }
 
-.pl-main-content h1 {
+.kbc-main-content h1 {
     margin: 7px 0;
     font-family: 'Sora', sans-serif;
     font-size: clamp(22px, 2.4vw, 34px);
     line-height: 1.12;
 }
 
-.pl-main-content p {
+.kbc-main-content p {
     margin: 0;
     color: #ead5f8;
     font-size: 15px;
 }
 
-.pl-news-rail {
+.kbc-news-rail {
     padding: 10px;
     display: grid;
     gap: 8px;
     align-content: start;
 }
 
-.pl-news-item {
+.kbc-news-item {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -274,20 +274,20 @@ body {
     gap: 8px;
 }
 
-.pl-news-item h3 {
+.kbc-news-item h3 {
     margin: 0;
     line-height: 1.2;
     font-size: 14px;
 }
 
-.pl-news-item img {
+.kbc-news-item img {
     width: 84px;
     height: 64px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.pl-news-category {
+.kbc-news-category {
     margin: 0 0 5px;
     font-size: 10px;
     letter-spacing: 0.08em;
@@ -296,24 +296,24 @@ body {
     font-weight: 700;
 }
 
-.pl-table-card {
+.kbc-table-card {
     padding: 10px;
 }
 
-.pl-table-head {
+.kbc-table-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
 }
 
-.pl-table-head h2 {
+.kbc-table-head h2 {
     margin: 0;
     font-family: 'Sora', sans-serif;
     font-size: 19px;
 }
 
-.pl-table-head button {
+.kbc-table-head button {
     border: 1px solid rgba(95, 228, 255, 0.45);
     border-radius: 999px;
     background: rgba(95, 228, 255, 0.1);
@@ -323,12 +323,12 @@ body {
     padding: 6px 10px;
 }
 
-.pl-table-list {
+.kbc-table-list {
     display: grid;
     gap: 5px;
 }
 
-.pl-table-row {
+.kbc-table-row {
     background: rgba(255, 255, 255, 0.06);
     border-radius: 8px;
     padding: 7px 8px;
@@ -338,13 +338,13 @@ body {
     gap: 6px;
 }
 
-.pl-table-row p,
-.pl-table-row strong {
+.kbc-table-row p,
+.kbc-table-row strong {
     margin: 0;
     font-size: 12px;
 }
 
-.pl-sponsor-strip {
+.kbc-sponsor-strip {
     margin-top: 10px;
     padding: 10px 12px;
     display: grid;
@@ -352,7 +352,7 @@ body {
     gap: 10px;
 }
 
-.pl-sponsor {
+.kbc-sponsor {
     text-align: center;
     padding: 8px 6px;
     border-radius: 8px;
@@ -361,75 +361,75 @@ body {
     letter-spacing: 0.02em;
 }
 
-.pl-section {
+.kbc-section {
     margin-top: 10px;
     padding: 10px;
 }
 
-.pl-section-head {
+.kbc-section-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 9px;
 }
 
-.pl-section-head h2 {
+.kbc-section-head h2 {
     margin: 0;
     font-family: 'Sora', sans-serif;
     font-size: 19px;
 }
 
-.pl-section-head a {
+.kbc-section-head a {
     color: var(--text-soft);
     text-decoration: none;
     font-size: 12px;
 }
 
-.pl-card-grid {
+.kbc-card-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 8px;
 }
 
-.pl-media-card {
+.kbc-media-card {
     border-radius: 9px;
     overflow: hidden;
     background: linear-gradient(180deg, #5a0b7d 0%, #430a63 100%);
     border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.pl-media-card img {
+.kbc-media-card img {
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;
     display: block;
 }
 
-.pl-media-content {
+.kbc-media-content {
     padding: 7px 8px 8px;
 }
 
-.pl-media-content p {
+.kbc-media-content p {
     margin: 0;
     font-size: 12px;
     line-height: 1.25;
     min-height: 31px;
 }
 
-.pl-media-content span {
+.kbc-media-content span {
     display: inline-block;
     margin-top: 5px;
     color: var(--text-soft);
     font-size: 10px;
 }
 
-.pl-center-btn-wrap {
+.kbc-center-btn-wrap {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-.pl-center-btn-wrap button {
+.kbc-center-btn-wrap button {
     border: 1px solid rgba(255, 255, 255, 0.24);
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -439,20 +439,20 @@ body {
     font-weight: 700;
 }
 
-.pl-match-grid {
+.kbc-match-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 8px;
 }
 
-.pl-match-card {
+.kbc-match-card {
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 9px;
     padding: 8px;
 }
 
-.pl-round {
+.kbc-round {
     margin: 0 0 6px;
     font-size: 10px;
     color: var(--cyan);
@@ -461,7 +461,7 @@ body {
     font-weight: 700;
 }
 
-.pl-match-teams {
+.kbc-match-teams {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -469,42 +469,42 @@ body {
     margin-bottom: 6px;
 }
 
-.pl-match-teams span,
-.pl-match-teams strong {
+.kbc-match-teams span,
+.kbc-match-teams strong {
     font-size: 12px;
 }
 
-.pl-match-info {
+.kbc-match-info {
     margin: 0;
     color: var(--text-soft);
     font-size: 10px;
 }
 
-.pl-footer {
+.kbc-footer {
     margin-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding-top: 12px;
 }
 
-.pl-footer-partners {
+.kbc-footer-partners {
     border-radius: 14px;
     border: 1px solid var(--line);
     background: linear-gradient(180deg, #390051 0%, #2f0044 100%);
     padding: 12px;
 }
 
-.pl-footer-partner-grid {
+.kbc-footer-partner-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 12px 8px;
 }
 
-.pl-footer-partner-card {
+.kbc-footer-partner-card {
     text-align: center;
     padding: 8px 6px;
 }
 
-.pl-footer-partner-card h3 {
+.kbc-footer-partner-card h3 {
     margin: 0 0 8px;
     font-family: 'Sora', sans-serif;
     font-size: 14px;
@@ -512,13 +512,13 @@ body {
     color: #fff;
 }
 
-.pl-footer-partner-card p {
+.kbc-footer-partner-card p {
     margin: 0;
     font-size: 11px;
     color: #f2e7ff;
 }
 
-.pl-footer-links {
+.kbc-footer-links {
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -526,24 +526,24 @@ body {
     padding: 2px 0 12px;
 }
 
-.pl-footer-link-col {
+.kbc-footer-link-col {
     display: grid;
     gap: 6px;
     padding: 6px 12px;
 }
 
-.pl-footer-link-col + .pl-footer-link-col {
+.kbc-footer-link-col + .kbc-footer-link-col {
     border-left: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.pl-footer-link-col a {
+.kbc-footer-link-col a {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
     font-size: 12px;
 }
 
-.pl-footer-bottom {
+.kbc-footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -551,7 +551,7 @@ body {
     padding: 10px 2px 0;
 }
 
-.pl-footer-bottom p {
+.kbc-footer-bottom p {
     margin: 0;
     font-size: 11px;
     color: #fff;
@@ -559,68 +559,68 @@ body {
     white-space: nowrap;
 }
 
-.pl-footer-bottom-links {
+.kbc-footer-bottom-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 7px;
 }
 
-.pl-footer-bottom-links a {
+.kbc-footer-bottom-links a {
     color: #f2e7ff;
     text-decoration: none;
     font-size: 11px;
 }
 
-.pl-footer-bottom-links a::after {
-    content: '•';
+.kbc-footer-bottom-links a::after {
+    content: 'â€¢';
     margin-left: 7px;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.pl-footer-bottom-links a:last-child::after {
+.kbc-footer-bottom-links a:last-child::after {
     content: '';
     margin-left: 0;
 }
 
 @media (max-width: 1200px) {
-    .pl-nav a {
+    .kbc-nav a {
         font-size: 13px;
         padding: 8px 9px;
     }
 
-    .pl-footer-link-col a { font-size: 12px; }
+    .kbc-footer-link-col a { font-size: 12px; }
 
-    .pl-hero-grid {
+    .kbc-hero-grid {
         grid-template-columns: 1fr;
     }
 
-    .pl-main-image {
+    .kbc-main-image {
         height: 290px;
     }
 
-    .pl-sponsor-strip,
-    .pl-card-grid,
-    .pl-match-grid,
-    .pl-footer-partner-grid {
+    .kbc-sponsor-strip,
+    .kbc-card-grid,
+    .kbc-match-grid,
+    .kbc-footer-partner-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 980px) {
-    .pl-microbar {
+    .kbc-microbar {
         display: none;
     }
 
-    .pl-menu-btn {
+    .kbc-menu-btn {
         display: grid;
     }
 
-    .pl-topbar {
+    .kbc-topbar {
         flex-wrap: nowrap;
     }
 
-    .pl-nav {
+    .kbc-nav {
         display: none;
         position: absolute;
         top: calc(100% + 6px);
@@ -639,62 +639,62 @@ body {
         max-height: 70vh;
     }
 
-    .pl-nav.is-open {
+    .kbc-nav.is-open {
         display: flex;
     }
 
-    .pl-nav a {
+    .kbc-nav a {
         width: 100%;
         padding: 10px 12px;
     }
 
-    .pl-topbar-right {
+    .kbc-topbar-right {
         margin-left: auto;
     }
 
-    .pl-topbar-right .pl-icon-btn:first-child {
+    .kbc-topbar-right .kbc-icon-btn:first-child {
         display: none;
     }
 }
 
 @media (max-width: 720px) {
-    .pl-sponsor-strip,
-    .pl-card-grid,
-    .pl-match-grid,
-    .pl-footer-partner-grid {
+    .kbc-sponsor-strip,
+    .kbc-card-grid,
+    .kbc-match-grid,
+    .kbc-footer-partner-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .pl-signin-btn {
+    .kbc-signin-btn {
         padding: 8px 14px;
         font-size: 13px;
     }
 
-    .pl-footer-link-col a { font-size: 12px; }
+    .kbc-footer-link-col a { font-size: 12px; }
 
-    .pl-footer-links {
+    .kbc-footer-links {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
-    .pl-footer-link-col + .pl-footer-link-col {
+    .kbc-footer-link-col + .kbc-footer-link-col {
         border-left: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.14);
         padding-top: 14px;
     }
 
-    .pl-footer-bottom {
+    .kbc-footer-bottom {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .pl-main-content h1 {
+    .kbc-main-content h1 {
         font-size: 24px;
     }
 }
 
 @media (max-width: 520px) {
-    .pl-content-wrap {
+    .kbc-content-wrap {
         padding-inline: 10px;
     }
 }

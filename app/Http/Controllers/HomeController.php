@@ -2,46 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NewsItem;
-use App\Models\Standing;
-use App\Models\TournamentMatch;
+use App\Http\Resources\Home\HomeMatchResource;
+use App\Http\Resources\Home\HomeNewsResource;
+use App\Http\Resources\Home\HomeStandingResource;
+use App\Services\Home\HomePageContentService;
 use Inertia\Inertia;
 use Inertia\Response;
 
 class HomeController extends Controller
 {
-    public function index(): Response
+    public function index(HomePageContentService $homePageContentService): Response
     {
-        $featuredNews = NewsItem::query()
-            ->where('is_featured', true)
-            ->latest('published_at')
-            ->first() ?? NewsItem::query()->latest('published_at')->first();
-
-        $news = NewsItem::query()
-            ->latest('published_at')
-            ->take(5)
-            ->get();
-
-        $standings = Standing::query()
-            ->with('team:id,name,short_name,logo_url')
-            ->orderBy('position')
-            ->take(10)
-            ->get();
-
-        $matches = TournamentMatch::query()
-            ->with([
-                'homeTeam:id,name,short_name,logo_url',
-                'awayTeam:id,name,short_name,logo_url',
-            ])
-            ->orderBy('match_date')
-            ->take(6)
-            ->get();
+        $homePageContent = $homePageContentService->getContent();
 
         return Inertia::render('Home', [
-            'featuredNews' => $featuredNews,
-            'news' => $news,
-            'standings' => $standings,
-            'matches' => $matches,
+            'featuredNews' => $homePageContent['featured_news']
+                ? HomeNewsResource::make($homePageContent['featured_news'])->resolve()
+                : null,
+            'news' => HomeNewsResource::collection($homePageContent['news'])->resolve(),
+            'standings' => HomeStandingResource::collection($homePageContent['standings'])->resolve(),
+            'matches' => HomeMatchResource::collection($homePageContent['matches'])->resolve(),
         ]);
     }
 }

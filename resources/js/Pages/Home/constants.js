@@ -1,0 +1,74 @@
+export const FALLBACK_IMAGE =
+    'https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1200&q=80';
+
+export const HERO_NEWS_LIMIT = 4;
+
+export const ALERT_TEXT =
+    'Kotabaru Hawks pastikan tiket playoff usai kemenangan dramatis pekan ini.';
+
+export const MICRO_LINKS = [
+    'Kotabaru Basketball Competition',
+    'Shop',
+    'About Us',
+    'Football & Community',
+    'Events',
+    'Media',
+    'The Archive',
+];
+
+export const NAV_LINKS = [
+    'Matches',
+    'Table',
+    'Statistics',
+    'Players',
+    'Clubs',
+    'Instagram',
+];
+
+export const SPONSORS = [
+    'Adidas',
+    'Coca-Cola',
+    'Nike',
+    'Microsoft',
+    'Puma',
+    'Molten',
+];
+
+export const PARTNERS = [
+    ['EA SPORTS FC', 'Lead Partner'],
+    ['Adobe', 'Official Creativity Partner'],
+    ['Barclays', 'Official Bank'],
+    ['Coca-Cola', 'Official Soft Drink'],
+    ['Guinness', 'Official Beer'],
+    ['Microsoft', 'Official Cloud & AI Partner'],
+    ['Puma', 'Official Ball'],
+    ['Avery Dennison', 'Official Licensee'],
+    ['Football Manager', 'Official Licensee'],
+    ['Rezzil', 'Official Licensee'],
+    ['Sorare', 'Official Licensee'],
+    ['Topps', 'Official Licensee'],
+];
+
+export const FOOTER_LINK_COLUMNS = [
+    ['Kotabaru Basketball Competition', 'Fantasy', 'Matches'],
+    ['Table', 'Statistics', 'Latest News'],
+    ['Latest Video', 'Clubs', 'Players'],
+];
+
+export const FOOTER_BOTTOM_LINKS = [
+    'Terms of Use',
+    'Policies',
+    'Cookie Policy',
+    'Contact Us',
+    'Back To Top',
+];
+
+export const MEDIA_SECTIONS = [
+    { key: 'moments', title: 'Unmissable Moments', count: 6 },
+    { key: 'features', title: 'News & Features', count: 8 },
+    { key: 'awards', title: 'Awards', count: 6 },
+    { key: 'champions', title: 'Champions Feed', count: 8 },
+    { key: 'clubs', title: 'From The Clubs', count: 6 },
+    { key: 'quizzes', title: 'Games, Quizzes & Polls', count: 5 },
+];
+
