@@ -1,16 +1,11 @@
-import { Head } from '@inertiajs/react';
 import { TABLE_PAGE_TITLE } from '../Features/Table/constants';
 import TablePageContent from '../Features/Table/Pages/TablePageContent';
-import PublicSiteLayout from '../Features/Site/Layouts/PublicSiteLayout';
+import PublicPageLayout from '../Features/Site/Layouts/PublicPageLayout';
 
 export default function Table({ standings, leader }) {
     return (
-        <>
-            <Head title={TABLE_PAGE_TITLE} />
-
-            <PublicSiteLayout>
-                <TablePageContent standings={standings ?? []} leader={leader} />
-            </PublicSiteLayout>
-        </>
+        <PublicPageLayout title={TABLE_PAGE_TITLE}>
+            <TablePageContent standings={standings ?? []} leader={leader} />
+        </PublicPageLayout>
     );
 }

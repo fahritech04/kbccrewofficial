@@ -26,11 +26,8 @@ export default function AppHeader({
             <header className="kbc-microbar">
                 <div className="kbc-micro-links">
                     {microLinks.map((item) => (
-                        <a
-                            key={typeof item === 'string' ? item : item.label}
-                            href={typeof item === 'string' ? '#' : item.href}
-                        >
-                            {typeof item === 'string' ? item : item.label}
+                        <a key={item.label} href={item.href}>
+                            {item.label}
                         </a>
                     ))}
                 </div>
@@ -59,19 +56,17 @@ export default function AppHeader({
 
                 <nav className={`kbc-nav ${isMobileMenuOpen ? 'is-open' : ''}`}>
                     {navLinks.map((item) => {
-                        const label = typeof item === 'string' ? item : item.label;
-                        const href = typeof item === 'string' ? '#' : item.href;
-                        const isActive = isNavItemActive(href);
+                        const isActive = isNavItemActive(item.href);
 
                         return (
                             <Link
-                                key={label}
-                                href={href}
+                                key={item.label}
+                                href={item.href}
                                 className={isActive ? 'is-active' : ''}
                                 aria-current={isActive ? 'page' : undefined}
                                 onClick={onCloseMobileMenu}
                             >
-                                {label}
+                                {item.label}
                             </Link>
                         );
                     })}

@@ -1,16 +1,11 @@
-import { Head } from '@inertiajs/react';
 import { INSTAGRAM_PAGE_TITLE } from '../Features/Instagram/constants';
 import InstagramPageContent from '../Features/Instagram/Pages/InstagramPageContent';
-import PublicSiteLayout from '../Features/Site/Layouts/PublicSiteLayout';
+import PublicPageLayout from '../Features/Site/Layouts/PublicPageLayout';
 
 export default function Instagram({ instagram }) {
     return (
-        <>
-            <Head title={INSTAGRAM_PAGE_TITLE} />
-
-            <PublicSiteLayout>
-                <InstagramPageContent instagram={instagram} />
-            </PublicSiteLayout>
-        </>
+        <PublicPageLayout title={INSTAGRAM_PAGE_TITLE}>
+            <InstagramPageContent instagram={instagram} />
+        </PublicPageLayout>
     );
 }

@@ -1,19 +1,14 @@
-import { Head } from '@inertiajs/react';
 import { MATCHES_PAGE_TITLE } from '../Features/Matches/constants';
 import MatchesPageContent from '../Features/Matches/Pages/MatchesPageContent';
-import PublicSiteLayout from '../Features/Site/Layouts/PublicSiteLayout';
+import PublicPageLayout from '../Features/Site/Layouts/PublicPageLayout';
 
 export default function Matches({ upcomingMatches, recentMatches }) {
     return (
-        <>
-            <Head title={MATCHES_PAGE_TITLE} />
-
-            <PublicSiteLayout>
-                <MatchesPageContent
-                    upcomingMatches={upcomingMatches ?? []}
-                    recentMatches={recentMatches ?? []}
-                />
-            </PublicSiteLayout>
-        </>
+        <PublicPageLayout title={MATCHES_PAGE_TITLE}>
+            <MatchesPageContent
+                upcomingMatches={upcomingMatches ?? []}
+                recentMatches={recentMatches ?? []}
+            />
+        </PublicPageLayout>
     );
 }

@@ -1,21 +1,16 @@
-import { Head } from '@inertiajs/react';
 import HomePageContent from '../Features/Home/Pages/HomePageContent';
-import PublicSiteLayout from '../Features/Site/Layouts/PublicSiteLayout';
+import PublicPageLayout from '../Features/Site/Layouts/PublicPageLayout';
 
 export default function Home({ featuredNews, news, standings, matches }) {
     return (
-        <>
-            <Head title="Kotabaru Basketball Competition" />
-
-            <PublicSiteLayout>
-                <HomePageContent
-                    featuredNews={featuredNews}
-                    news={news}
-                    standings={standings}
-                    matches={matches}
-                />
-            </PublicSiteLayout>
-        </>
+        <PublicPageLayout title="Kotabaru Basketball Competition">
+            <HomePageContent
+                featuredNews={featuredNews}
+                news={news}
+                standings={standings}
+                matches={matches}
+            />
+        </PublicPageLayout>
     );
 }
 

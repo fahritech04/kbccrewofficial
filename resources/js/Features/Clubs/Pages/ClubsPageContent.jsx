@@ -1,4 +1,4 @@
-import { SITE_FALLBACK_IMAGE } from '../../Site/constants';
+import { resolveImageUrl } from '../../Site/utils/media';
 
 export default function ClubsPageContent({ clubs }) {
     return (
@@ -16,7 +16,7 @@ export default function ClubsPageContent({ clubs }) {
                 <div className="kbc-card-grid">
                     {clubs.map((club) => (
                         <article key={club.id} className="kbc-media-card">
-                            <img src={club.logo_url ?? SITE_FALLBACK_IMAGE} alt={club.name} />
+                            <img src={resolveImageUrl(club.logo_url)} alt={club.name} />
                             <div className="kbc-media-content">
                                 <p>{club.name}</p>
                                 <span>

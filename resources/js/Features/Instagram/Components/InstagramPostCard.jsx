@@ -14,7 +14,7 @@ export default function InstagramPostCard({ post }) {
             <div className="kbc-ig-card-body">
                 <p className="kbc-ig-caption">{trimText(post.caption)}</p>
                 <p className="kbc-ig-metrics">
-                    ? {post.like_count ?? 0} · ?? {post.comments_count ?? 0}
+                    Likes {post.like_count ?? 0} • Komentar {post.comments_count ?? 0}
                 </p>
 
                 {post.comments?.length > 0 ? (

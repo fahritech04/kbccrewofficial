@@ -5,7 +5,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "test:js": "node --test resources/js/Features/Site/utils/date.test.js"
+        "test:js": "node --test resources/js/Features/Site/utils/date.test.js resources/js/Features/Site/utils/standings.test.js resources/js/Features/Site/utils/media.test.js"
     },
     "devDependencies": {
         "@headlessui/react": "^2.0.0",

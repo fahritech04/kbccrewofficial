@@ -1,4 +1,4 @@
-import { SITE_FALLBACK_IMAGE } from '../Site/constants';
+import { resolveImageUrl } from '../Site/utils/media';
 
 export function trimText(text, maxLength = 120) {
     if (!text) {
@@ -11,5 +11,5 @@ export function trimText(text, maxLength = 120) {
 export function toProxyImageUrl(url) {
     return url
         ? `/instagram/media?src=${encodeURIComponent(url)}`
-        : SITE_FALLBACK_IMAGE;
+        : resolveImageUrl(url);
 }

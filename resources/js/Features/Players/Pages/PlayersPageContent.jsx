@@ -1,4 +1,4 @@
-import { SITE_FALLBACK_IMAGE } from '../../Site/constants';
+import { resolveImageUrl } from '../../Site/utils/media';
 import StandingsCompactRows from '../../Site/Components/StandingsCompactRows';
 
 export default function PlayersPageContent({ spotlightTeams, stories }) {
@@ -32,7 +32,7 @@ export default function PlayersPageContent({ spotlightTeams, stories }) {
                     <div className="kbc-card-grid">
                         {stories.map((story) => (
                             <article key={story.id} className="kbc-media-card">
-                                <img src={story.image_url ?? SITE_FALLBACK_IMAGE} alt={story.title} />
+                                <img src={resolveImageUrl(story.image_url)} alt={story.title} />
                                 <div className="kbc-media-content">
                                     <p>{story.title}</p>
                                     <span>{story.category}</span>

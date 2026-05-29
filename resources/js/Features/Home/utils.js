@@ -1,4 +1,4 @@
-import { SITE_FALLBACK_IMAGE } from '../Site/constants';
+import { resolveImageUrl } from '../Site/utils/media';
 
 export function buildCardsFromNews(news, count, sectionKey) {
     if (!news?.length) {
@@ -12,7 +12,7 @@ export function buildCardsFromNews(news, count, sectionKey) {
             id: `${sectionKey}-${item.id}-${index}`,
             title: item.title,
             category: item.category,
-            image: item.image_url ?? SITE_FALLBACK_IMAGE,
+            image: resolveImageUrl(item.image_url),
         };
     });
 }

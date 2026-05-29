@@ -1,19 +1,14 @@
-import { Head } from '@inertiajs/react';
 import { PLAYERS_PAGE_TITLE } from '../Features/Players/constants';
 import PlayersPageContent from '../Features/Players/Pages/PlayersPageContent';
-import PublicSiteLayout from '../Features/Site/Layouts/PublicSiteLayout';
+import PublicPageLayout from '../Features/Site/Layouts/PublicPageLayout';
 
 export default function Players({ spotlightTeams, stories }) {
     return (
-        <>
-            <Head title={PLAYERS_PAGE_TITLE} />
-
-            <PublicSiteLayout>
-                <PlayersPageContent
-                    spotlightTeams={spotlightTeams ?? []}
-                    stories={stories ?? []}
-                />
-            </PublicSiteLayout>
-        </>
+        <PublicPageLayout title={PLAYERS_PAGE_TITLE}>
+            <PlayersPageContent
+                spotlightTeams={spotlightTeams ?? []}
+                stories={stories ?? []}
+            />
+        </PublicPageLayout>
     );
 }

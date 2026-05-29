@@ -1,16 +1,11 @@
-import { Head } from '@inertiajs/react';
 import { CLUBS_PAGE_TITLE } from '../Features/Clubs/constants';
 import ClubsPageContent from '../Features/Clubs/Pages/ClubsPageContent';
-import PublicSiteLayout from '../Features/Site/Layouts/PublicSiteLayout';
+import PublicPageLayout from '../Features/Site/Layouts/PublicPageLayout';
 
 export default function Clubs({ clubs }) {
     return (
-        <>
-            <Head title={CLUBS_PAGE_TITLE} />
-
-            <PublicSiteLayout>
-                <ClubsPageContent clubs={clubs ?? []} />
-            </PublicSiteLayout>
-        </>
+        <PublicPageLayout title={CLUBS_PAGE_TITLE}>
+            <ClubsPageContent clubs={clubs ?? []} />
+        </PublicPageLayout>
     );
 }

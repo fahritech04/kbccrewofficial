@@ -16,7 +16,7 @@ export default function InstagramProfileSummary({ profile }) {
             <div>
                 <h2>@{profile.username ?? INSTAGRAM_DEFAULT_USERNAME}</h2>
                 <p>
-                    {profile.followers_count ?? '-'} followers · {profile.media_count ?? '-'} posts
+                    {profile.followers_count ?? '-'} followers • {profile.media_count ?? '-'} posts
                 </p>
             </div>
         </div>
